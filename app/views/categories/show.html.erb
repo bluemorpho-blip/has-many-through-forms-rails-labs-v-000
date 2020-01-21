@@ -1,0 +1,6 @@
+<h1>Categories#Show</h1>
+<h2>Category: <%= @category.name %></h2>
+<%= @category.posts.each do |post| %>
+  <p>Title: <%= link_to post.title, post_path(post) %></p>
+  <p>Content: <%= post.content %></p>
+<% end %>
